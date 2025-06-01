@@ -37,16 +37,8 @@ function run_nginx_container() {
     sudo docker run -d --name nginx-container nginx
 }
 
-# Copy the sample pcap file
-function copy_pcap_file() {
-    TARGET_DIR="/home/kali/Desktop/Labs/tcpdump"
-    echo "[*] Copying pcap file..."
-    sudo cp ./capture.pcap "$TARGET_DIR"
-}
-
 # Main script logic
 install_prereqs
 cleanup_containers
 run_nginx_container
-copy_pcap_file
 echo "tcpdump lab ready to use ....."

@@ -48,4 +48,5 @@ function copy_pcap_file() {
 install_prereqs
 cleanup_containers
 run_nginx_container
+copy_pcap_file
 echo "tcpdump lab ready to use ....."
